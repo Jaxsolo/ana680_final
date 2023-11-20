@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Children Anemia</title>
+</head>
+<body>
+    <form action="{{ url_for('predict')}}" method="POST">
+        Hemoglobin_level: <input type="number" name="Hemoglobin level"><br>
+        Living_place: <input type="number" name="Type of place of residence" placeholder="Enter 1 for Urban, 0 for Rural"><br>
+        Wealth_level: <input type="number" name="Wealth index combined" placeholder="Enter 4 for Richest, 3 for Richer, 2 for Middle, 1 for Poorer, 0 for Poorest"><br>
+        Age_1st_birth: <input type="number" name="Age of respondent at 1st birth"><br>
+
+        <input type="submit" value="Submit">
+   </form>
+    My prediction: {{ predict }}
+</body>
+</html>
+
